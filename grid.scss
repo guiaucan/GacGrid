@@ -1,0 +1,370 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6em;
+}
+
+.container {
+	float: left;
+	width: 100%;
+	padding: 50px 20px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	&:after {
+		content: "";
+		display: inline-block;
+		clear: both;
+	}
+
+	&.no-spacing-top {
+		padding-top: 0;
+	}
+
+	&.no-spacing-bottom {
+		padding-bottom: 0;
+	}
+
+	&.no-spacing {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.row {
+		margin-top: 40px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:after {
+			content: " ";
+			display: table;
+			clear: both;
+		}
+
+		&.box {
+			max-width: 1260px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&.no-spacing-top {
+			margin-bottom: 0;
+
+			[class*=col-] {
+				margin-bottom: 0;
+			}
+		}
+
+		[class*=col-] {
+			float: left;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			-moz-background-clip: padding-box !important;
+			-webkit-background-clip: padding-box !important;
+			background-clip: padding-box !important;
+			margin: 1% 0;
+		}
+
+		[class*=col-] + [class*=col-] {
+			margin-left: 2%;
+		}
+	}
+
+	&.full-row {
+		padding-left: 0;
+		padding-right: 0;
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+
+		.row {
+			&.padding-horizontal {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+	}
+
+	&.full-col {
+		.row {
+			margin-left: 0;
+
+			[class*=col-] {
+				border-left-width: 0;
+			}
+		}
+	}
+}
+
+
+/* Tamanhos
+----------------------------------------------------------------------------- 
+
+	Col 1:    6.5%
+	Col 2:    15%
+	Col 3:    23.5%
+	Col 4:    32%
+	Col 5:    40.5%
+	Col 6:    49%
+	Col 7:    57.5%
+	Col 8:    66%
+	Col 9:    74.5%
+	Col 10:   83%
+	Col 11:   91.5%
+	Col 12:   100%
+
+----------------------------------------------------------------------------- */
+
+.col-1 {
+	width: 6.5%;
+}
+
+.col-2 {
+	width: 15%;
+}
+
+.col-3 {
+	width: 23.5%;
+}
+
+.col-4 {
+	width: 32%;
+}
+
+.col-5 {
+	width: 40.5%;
+}
+
+.col-6 {
+	width: 49%;
+}
+
+.col-7 {
+	width: 57.5%;
+}
+
+.col-8 {
+	width: 66%;
+}
+
+.col-9 {
+	width: 74.5%;
+}
+
+.col-10 {
+	width: 83%;
+}
+
+.col-11 {
+	width: 91.5%;
+}
+
+.col-12 {
+	margin-left: 0;
+	width: 100%;
+}
+
+/* Media Query
+----------------------------------------------------------------------------- 
+
+	1023px x 768px = col-N-mp*
+	767px x 480px = col-N-m*
+	480px x 0 = col-N-p*
+	
+	* N = Número de colunas que box tem de 1 à 12
+
+----------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1023px) {
+	.col-1-mp {
+		width: 6.5%;
+	}
+
+	.col-2-mp {
+		width: 15%;
+	}
+
+	.col-3-mp {
+		width: 23.5%;
+	}
+
+	.col-4-mp {
+		width: 32%;
+	}
+
+	.col-5-mp {
+		width: 40.5%;
+	}
+
+	.col-6-mp {
+		width: 49%;
+	}
+
+	.col-7-mp {
+		width: 57.5%;
+	}
+
+	.col-8-mp {
+		width: 66%;
+	}
+
+	.col-9-mp {
+		width: 74.5%;
+	}
+
+	.col-10-mp {
+		width: 83%;
+	}
+
+	.col-11-mp {
+		width: 91.5%;
+	}
+
+	.col-12-mp {
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.col-1-m {
+		width: 6.5%;
+	}
+
+	.col-2-m {
+		width: 15%;
+	}
+
+	.col-3-m {
+		width: 23.5%;
+	}
+
+	.col-4-m {
+		width: 32%;
+	}
+
+	.col-5-m {
+		width: 40.5%;
+	}
+
+	.col-6-m {
+		width: 49%;
+	}
+
+	.col-7-m {
+		width: 57.5%;
+	}
+
+	.col-8-m {
+		width: 66%;
+	}
+
+	.col-9-m {
+		width: 74.5%;
+	}
+
+	.col-10-m {
+		width: 83%;
+	}
+
+	.col-11-m {
+		width: 91.5%;
+	}
+
+	.col-12-m {
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.col-1-p {
+		width: 6.5%;
+	}
+
+	.col-2-p {
+		width: 15%;
+	}
+
+	.col-3-p {
+		width: 23.5%;
+	}
+
+	.col-4-p {
+		width: 32%;
+	}
+
+	.col-5-p {
+		width: 40.5%;
+	}
+
+	.col-6-p {
+		width: 49%;
+	}
+
+	.col-7-p {
+		width: 57.5%;
+	}
+
+	.col-8-p {
+		width: 66%;
+	}
+
+	.col-9-p {
+		width: 74.5%;
+	}
+
+	.col-10-p {
+		width: 83%;
+	}
+
+	.col-11-p {
+		width: 91.5%;
+	}
+
+	.col-12-p {
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+
+/* Media Query Fixed
+----------------------------------------------------------------------------- 
+
+	( Window >= 1320px ) .row.box = 1280px
+	( 1320px : 1064px )  .row.box = 1024px
+	( 1064px : 808px )   .row.box = 768px
+	( 808px : 0 )        .row.box = 100%
+
+----------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1320px) {
+	.container {
+		&.fixed {
+			.row {
+				&.box {
+					max-width: 1024px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1064px) {
+	.container {
+		&.fixed {
+			.row {
+				&.box {
+					max-width: 768px;
+				}
+			}
+		}
+	}
+}

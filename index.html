@@ -1,0 +1,505 @@
+<html html>
+<meta charset="utf-8">
+<head>
+	<title>Padrão de Grid</title>
+
+	<link rel="stylesheet" href="grid.css">
+
+	<!-- Include *at least* the core style and default theme -->
+	<!-- <link href="highlighter/styles/shCoreMDUltra.css" rel="stylesheet" type="text/css" />
+	<link href="highlighter/styles/shThemeMDUltra.css" rel="stylesheet" type="text/css" /> -->
+
+	<link href="highlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="highlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		[class*=col-] {
+			background: #CCC;
+			padding: 20px 0;
+			text-align: center;
+		}
+		.no-background {
+			background: transparent;
+			text-align: left;
+		}
+		.no-padding-row {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		footer {
+			margin-top: 60px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			box-shadow: 0 -1px 1px 0px rgba(0,0,0,0.2);
+			float: left;
+			width: 100%;
+			text-align: center;
+			padding: 20px 0; 
+		}
+	</style>
+
+
+	<script type="text/javascript" src="highlighter/src/shCore.js"></script>
+	<script type="text/javascript" src="highlighter/scripts/shBrushXml.js"></script>
+
+	
+	<!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+	<script type="text/javascript">
+     	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+		SyntaxHighlighter.config.strings.help = '?';
+		SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+		SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+		SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+		SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+		SyntaxHighlighter.defaults['toolbar'] = false;
+		SyntaxHighlighter.all();
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 no-background no-padding-row">
+				<h2>
+					GRID SIMPLES
+				</h2>
+				<p class="syntaxhighlighter">
+					Cada bloco recebe uma classe <code class="xml string">container</code> <br>
+					Cada linha recebe uma classe <code class="xml string">row</code> <br>
+					Cada coluna recebe uma classe <code class="xml string">col-N*</code> <br>
+					N* = Número de colunas que varia de 1 à 12
+				</p>
+
+				<pre class="brush: xml; notranslate">
+					<div class="container">
+						<div class="row">
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+							<div class="col-1"></div>
+						</div>
+					</div>
+				</pre>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+			<div class="col-1">1</div>
+		</div>
+
+		<div class="row">
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+		</div>
+
+		<div class="row">
+			<div class="col-3">3</div>
+			<div class="col-3">3</div>
+			<div class="col-3">3</div>
+			<div class="col-3">3</div>
+		</div>
+
+		<div class="row">
+			<div class="col-4">4</div>
+			<div class="col-4">4</div>
+			<div class="col-4">4</div>
+		</div>
+
+		<div class="row">
+			<div class="col-5">5</div>
+			<div class="col-5">5</div>
+			<div class="col-2">2</div>
+		</div>
+
+		<div class="row">
+			<div class="col-6">6</div>
+			<div class="col-6">6</div>
+		</div>
+
+		<div class="row">
+			<div class="col-7">7</div>
+			<div class="col-5">5</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-8">8</div>
+			<div class="col-4">4</div>
+		</div>
+
+		<div class="row">
+			<div class="col-9">9</div>
+			<div class="col-3">3</div>
+		</div>
+
+		<div class="row">
+			<div class="col-10">10</div>
+			<div class="col-2">2</div>
+		</div>
+
+		<div class="row">
+			<div class="col-11">11</div>
+			<div class="col-1">1</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">12</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12 no-background no-padding-row">
+				<h2>
+					GRID com tamanho definido
+				</h2>
+				<p class="syntaxhighlighter">
+					Para que um box fique com um tamanho definido é necessário adicionar uma classe <code class="xml string">box</code> junto à classe <code class="xml string">row</code>
+				</p>
+
+				<pre class="brush: xml; notranslate">
+					<div class="container">
+						<div class="row box">
+							<div class="col-6">
+								<!-- Conteudo -->
+							</div>
+							<div class="col-6">
+								<!-- Conteudo -->
+							</div>
+						</div>
+					</div>
+				</pre>
+			</div>
+		</div>
+
+		<div class="row box">
+			<div class="col-6">6</div>
+			<div class="col-6">6</div>
+		</div>
+
+		<div class="row box">
+			<div class="col-12">12</div>
+		</div>
+	</div>
+
+	<div class="container fixed">
+		<div class="row">
+			<div class="col-12 no-background no-padding-row">
+				<h2>
+					GRID com tamanho definido ajustavel conforme o tamanho da tela
+				</h2>
+				
+				<p class="syntaxhighlighter">
+					O tamanho do container é fixo e fica centralizado na tela. <br>
+					Se o tamanho da tela for maior que <code class="xml string">1320px</code> o tamnaho da linha vai ser de <code class="xml string">1280px</code> <br>
+					Se o tamanho da tela for menor que <code class="xml string">1320px</code> e maior que <code class="xml string">1064px</code> o tamnaho da linha vai ser de <code class="xml string">1024px</code> <br>
+					Se o tamanho da tela for menor que <code class="xml string">164px</code> e maior que <code class="xml string">808px</code> o tamnaho da linha vai ser de <code class="xml string">768px</code> <br>
+					Se o tamanho da tela for menor que <code class="xml string">808px</code> o tamnaho da linha vai ser de <code class="xml string">100%</code>
+				</p>
+
+				<pre class="brush: xml; notranslate">
+					<div class="container fixed">
+						<div class="row box">
+							<div class="col-12">
+								<!-- Conteudo -->
+							</div>
+						</div>
+					</div>
+				</pre>
+			</div>
+		</div>
+		<div class="row box">
+			<div class="col-6">6</div>
+			<div class="col-6">6</div>
+		</div>
+		<div class="row box">
+			<div class="col-12">12</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12 no-background no-padding-row">
+				<h2>
+					Linha sem espaçamento
+				</h2>
+
+				<p class="syntaxhighlighter">
+					Todas as linhas possuem um espaçamento superior de <code class="xml string">40px</code> da row + <code class="xml string">20px</code> da coluna, ou seja,  <code class="xml string">60px</code><br>
+					Para que uma linha fique sem espaçamento entre uma e outra basta apenas adcionar a classe <code class="xml string">no-spacing-top</code> junto da classe <code class="xml string">row</code> na
+					linha na qual você deseja que fique sem espaçamento com a linha anterior.
+				</p>
+
+				<pre class="brush: xml; notranslate">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">12</div>
+						</div>
+
+						<div class="row no-spacing-top">
+							<div class="col-12">12</div>
+						</div>
+
+						<div class="row">
+							<div class="col-12">12</div>
+						</div>
+					</div>
+				</pre>
+			</div>
+		</div>
+
+		<div class="row no-spacing-bottom">
+			<div class="col-12">12</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">12</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">12</div>
+		</div>
+	</div>
+
+	<div class="container full-col">
+		<div class="row">
+			<div class="col-12 no-background no-padding-row">
+				<h2>
+					Colunas sem espaçamento entre as si.
+				</h2>
+
+				<p class="syntaxhighlighter">
+					Basta inserir a classe <code class="xml string">full-col</code> no container em que as colunas estão.
+				</p>
+
+				<pre class="brush: xml; notranslate">
+					<div class="container full-col">
+						<div class="row">
+							<div class="col-6">6</div>
+							<div class="col-6">6</div>
+						</div>
+
+						<div class="row">
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+						</div>
+					</div>
+				</pre>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-6">6</div>
+			<div class="col-6">6</div>
+		</div>
+
+		<div class="row">
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+		</div>
+	</div>
+
+	<div class="container full-row">
+		<div class="row padding-horizontal">
+			<div class="col-12 no-background no-padding-row">
+				<h2>
+					Linha com 100% do tamanho da tela.
+				</h2>
+
+				<p class="syntaxhighlighter">
+					Basta inserir a classe <code class="xml string">full-row</code> no container em que as linhas estão.
+				</p>
+
+				<pre class="brush: xml; notranslate">
+					<div class="container full-row">
+						<div class="row">
+							<div class="col-6">6</div>
+							<div class="col-6">6</div>
+						</div>
+
+						<div class="row">
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+						</div>
+					</div>
+				</pre>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-6">6</div>
+			<div class="col-6">6</div>
+		</div>
+
+		<div class="row">
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+		</div>
+	</div>
+
+	<div class="container full-row">
+		<div class="row padding-horizontal">
+			<div class="col-12 no-background no-padding-row">
+				<h2>
+					Linha com espaçamento dentro de um container com 100% do tamanho da tela.
+				</h2>
+				
+				<p class="syntaxhighlighter">
+					As vezes nos containers com 100% do tamanho da tela é necessário inserir textos. 
+					Caso esse texto seja inserido numa row dentro desse conainer, ela ficará grudada
+					nos cantos da tela. <br>
+					Para resolver esse problema basta adicionar na row desejada a class <code class="xml string">padding-horinzontal</code>.
+				</p>
+
+				<pre class="brush: xml; notranslate">
+					<div class="container full-row">
+						<div class="row padding-horizontal">
+							<div class="col-12">
+								<p>
+									As vezes nos containers com 100% do tamanho da tela é necessário inserir textos. 
+									Caso esse texto seja inserido numa row dentro desse conainer, ela ficará grudada
+									nos cantos da tela.
+								</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-6">6</div>
+							<div class="col-6">6</div>
+						</div>
+
+						<div class="row">
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+							<div class="col-2">2</div>
+						</div>
+					</div>
+				</pre>
+			</div>
+		</div>
+
+		<div class="row padding-horizontal">
+			<div class="col-12 no-background no-padding-row">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae quam hendrerit lacus 
+					laoreet pretium iaculis a mi. Proin quam libero, scelerisque a est et, ornare lobortis lacus.
+					Morbi id scelerisque justo, in bibendum purus. Vestibulum vitae tempus tellus. Pellentesque 
+					consectetur lacus vel enim dictum rhoncus. Duis sollicitudin augue nec efficitur eleifend. 
+					Donec ultrices rhoncus purus ut facilisis. Aenean odio neque, pretium ut tempus condimentum, 
+					pulvinar at arcu. Vivamus ultricies risus vel venenatis mollis. Nam tincidunt eu arcu ut fringilla. 
+					Duis a elementum purus, a maximus velit. Sed fermentum enim quis felis facilisis, euismod aliquet
+					libero luctus. Donec rhoncus ornare nibh, vitae posuere enim viverra in. Sed ac pulvinar quam. 
+					Mauris eget ornare lorem, at hendrerit augue. Duis in ligula a orci semper rhoncus id ac dui.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-6">6</div>
+			<div class="col-6">6</div>
+		</div>
+
+		<div class="row">
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+			<div class="col-2">2</div>
+		</div>
+	</div>
+
+	<div class="container full-row">
+		<div class="row padding-horizontal">
+			<div class="col-12 no-background no-padding-row">
+				<h2>
+					Espaçamento dos containes
+				</h2>
+				
+				<p class="syntaxhighlighter">
+					O container possui espaçamento superior de <code class="xml string">50px</code> e inferior de <code class="xml string">60px</code>.
+				</p>
+
+				<p class="syntaxhighlighter">
+					Caso deseje tirar o espaçamento superior basta apenas incluir a classe <code class="xml string">no-spacing-top</code> no container.
+				</p>
+
+				<pre class="brush: xml; notranslate">
+					<div class="container no-spacing-top">
+						<!-- Conteudo -->
+					</div>
+				</pre>
+
+				<p class="syntaxhighlighter">
+					Caso deseje tirar o espaçamento inferior basta apenas incluir a classe <code class="xml string">no-spacing-bottom</code> no container.
+				</p>
+
+				<pre class="brush: xml; notranslate">
+					<div class="container no-spacing-bottom">
+						<!-- Conteudo -->
+					</div>
+				</pre>
+
+				<p class="syntaxhighlighter">
+					Caso deseje tirar o espaçamento de ambos basta apenas incluir a classe <code class="xml string">no-spacing</code> no container.
+				</p>
+
+				<pre class="brush: xml; notranslate">
+					<div class="container no-spacing">
+						<!-- Conteudo -->
+					</div>
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		GAC GRID
+	</footer>
+</body>
+</html>
