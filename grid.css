@@ -66,18 +66,18 @@ body {
 /* Tamanhos
 ----------------------------------------------------------------------------- 
 
-	Col 1:    6.5%
-	Col 2:    15%
-	Col 3:    23.5%
-	Col 4:    32%
-	Col 5:    40.5%
-	Col 6:    49%
-	Col 7:    57.5%
-	Col 8:    66%
-	Col 9:    74.5%
-	Col 10:   83%
-	Col 11:   91.5%
-	Col 12:   100%
+  Col 1:    6.5%
+  Col 2:    15%
+  Col 3:    23.5%
+  Col 4:    32%
+  Col 5:    40.5%
+  Col 6:    49%
+  Col 7:    57.5%
+  Col 8:    66%
+  Col 9:    74.5%
+  Col 10:   83%
+  Col 11:   91.5%
+  Col 12:   100%
 
 ----------------------------------------------------------------------------- */
 .col-1 {
@@ -120,11 +120,11 @@ body {
 /* Media Query
 ----------------------------------------------------------------------------- 
 
-	1023px x 768px = col-N-mp*
-	767px x 480px = col-N-m*
-	480px x 0 = col-N-p*
-	
-	* N = Número de colunas que box tem de 1 à 12
+  1023px x 768px = col-N-mp*
+  767px x 480px = col-N-m*
+  480px x 0 = col-N-p*
+  
+  * N = Número de colunas que box tem de 1 à 12
 
 ----------------------------------------------------------------------------- */
 @media screen and (max-width: 1023px) {
@@ -244,13 +244,17 @@ body {
     width: 100%; }
  }
 
+.container.no-fluid .row {
+  margin-left: auto;
+  margin-right: auto; }
+
 /* Media Query Fixed
 ----------------------------------------------------------------------------- 
 
-	( Window >= 1320px ) .row.box = 1280px
-	( 1320px : 1064px )  .row.box = 1024px
-	( 1064px : 808px )   .row.box = 768px
-	( 808px : 0 )        .row.box = 100%
+  ( Window >= 1320px ) .row.box = 1280px
+  ( 1320px : 1064px )  .row.box = 1024px
+  ( 1064px : 808px )   .row.box = 768px
+  ( 808px : 0 )        .row.box = 100%
 
 ----------------------------------------------------------------------------- */
 @media screen and (max-width: 1320px) {
@@ -262,3 +266,43 @@ body {
   .container.fixed .row.box {
     max-width: 768px; }
  }
+
+@media screen and (min-width: 520px) {
+  .no-fluid .row {
+    width: 440px; }
+ }
+
+@media screen and (min-width: 808px) {
+  .no-fluid .row {
+    width: 728px; }
+ }
+
+@media screen and (min-width: 1064px) {
+  .no-fluid .row {
+    width: 984px; }
+ }
+
+@media screen and (min-width: 1320px) {
+  .no-fluid .row {
+    width: 1260px; }
+ }
+
+@media screen and (max-width: 520px) {
+  .no-fluid .row {
+    width: 100%;
+    padding: 0 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+ }
+
+.list .item.col-1 {
+  width: 6.5%; }
+.list .item.col-2 {
+  width: 15%; }
+.list .item.col-3 {
+  width: 23.5%; }
+.list .item.col-4 {
+  width: 32%; }
+.list .item.col-6 {
+  width: 49%; }
