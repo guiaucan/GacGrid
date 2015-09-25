@@ -10,7 +10,16 @@ body {
   padding: 50px 20px 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  /*&.full-col {
+    .row {
+      margin-left: 0;
+
+      [class^=col-] {
+        margin-left: 0;
+      }
+    }
+  }*/ }
   .container:after {
     content: "";
     display: inline-block;
@@ -22,6 +31,9 @@ body {
   .container.no-spacing {
     padding-top: 0;
     padding-bottom: 0; }
+  .container.no-fluid .row {
+    margin-left: auto;
+    margin-right: auto; }
   .container .row {
     margin-top: 40px; }
     .container .row:first-child {
@@ -35,10 +47,10 @@ body {
       margin-left: auto;
       margin-right: auto; }
     .container .row.no-spacing-top {
-      margin-bottom: 0; }
-      .container .row.no-spacing-top [class*=col-] {
-        margin-bottom: 0; }
-    .container .row [class*=col-] {
+      margin-top: 0; }
+      .container .row.no-spacing-top [class^=col-] {
+        margin-top: 0; }
+    .container .row [class^=col-] {
       float: left;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -46,9 +58,33 @@ body {
       -moz-background-clip: padding-box !important;
       -webkit-background-clip: padding-box !important;
       background-clip: padding-box !important;
-      margin: 1% 0; }
-    .container .row [class*=col-] + [class*=col-] {
+      margin: 1% 0 0; }
+    .container .row [class^=col-] + [class^=col-] {
       margin-left: 2%; }
+  .container .list-col-3 {
+    margin-left: -2%;
+    list-style: none;
+    padding: 0; }
+  .container .list-col-3 li {
+    width: 23.0003%;
+    margin: 2% 0% 0 2%;
+    float: left; }
+  .container .list-col-4 {
+    margin-left: -2%;
+    list-style: none;
+    padding: 0; }
+  .container .list-col-4 li {
+    width: 31.3338%;
+    margin: 2% 0% 0 2%;
+    float: left; }
+  .container .list-col-6 {
+    margin-left: -2%;
+    list-style: none;
+    padding: 0; }
+  .container .list-col-6 li {
+    width: 48%;
+    margin: 2% 0% 0 2%;
+    float: left; }
   .container.full-row {
     padding-left: 0;
     padding-right: 0;
@@ -58,10 +94,6 @@ body {
     .container.full-row .row.padding-horizontal {
       padding-left: 20px;
       padding-right: 20px; }
-  .container.full-col .row {
-    margin-left: 0; }
-    .container.full-col .row [class*=col-] {
-      border-left-width: 0; }
 
 /* Tamanhos
 ----------------------------------------------------------------------------- 
@@ -116,6 +148,31 @@ body {
 .col-12 {
   margin-left: 0;
   width: 100%; }
+
+.container.full-col .row [class^=col-] {
+  margin-left: 0; }
+.container.full-col .row .col-1 {
+  width: 8.3333%; }
+.container.full-col .row .col-2 {
+  width: 16.6666%; }
+.container.full-col .row .col-3 {
+  width: 25%; }
+.container.full-col .row .col-4 {
+  width: 33.3333%; }
+.container.full-col .row .col-5 {
+  width: 41.6666%; }
+.container.full-col .row .col-6 {
+  width: 50%; }
+.container.full-col .row .col-7 {
+  width: 58.3333%; }
+.container.full-col .row .col-8 {
+  width: 66.6666%; }
+.container.full-col .row .col-9 {
+  width: 75%; }
+.container.full-col .row .col-10 {
+  width: 83.3333%; }
+.container.full-col .row .col-11 {
+  width: 91.6666%; }
 
 /* Media Query
 ----------------------------------------------------------------------------- 
@@ -244,10 +301,6 @@ body {
     width: 100%; }
  }
 
-.container.no-fluid .row {
-  margin-left: auto;
-  margin-right: auto; }
-
 /* Media Query Fixed
 ----------------------------------------------------------------------------- 
 
@@ -266,43 +319,3 @@ body {
   .container.fixed .row.box {
     max-width: 768px; }
  }
-
-@media screen and (min-width: 520px) {
-  .no-fluid .row {
-    width: 440px; }
- }
-
-@media screen and (min-width: 808px) {
-  .no-fluid .row {
-    width: 728px; }
- }
-
-@media screen and (min-width: 1064px) {
-  .no-fluid .row {
-    width: 984px; }
- }
-
-@media screen and (min-width: 1320px) {
-  .no-fluid .row {
-    width: 1260px; }
- }
-
-@media screen and (max-width: 520px) {
-  .no-fluid .row {
-    width: 100%;
-    padding: 0 20px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
- }
-
-.list .item.col-1 {
-  width: 6.5%; }
-.list .item.col-2 {
-  width: 15%; }
-.list .item.col-3 {
-  width: 23.5%; }
-.list .item.col-4 {
-  width: 32%; }
-.list .item.col-6 {
-  width: 49%; }

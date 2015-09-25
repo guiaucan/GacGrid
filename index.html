@@ -17,7 +17,7 @@
 			margin: 0;
 			padding: 0;
 		}
-		[class*=col-] {
+		[class^=col-] {
 			background: #CCC;
 			padding: 20px 0;
 			text-align: center;
@@ -29,6 +29,11 @@
 		.no-padding-row {
 			padding-top: 0;
 			padding-bottom: 0;
+		}
+		.list li {
+			background: #CCC;
+			padding: 20px 0;
+			text-align: center;
 		}
 		footer {
 			margin-top: 60px;
@@ -274,11 +279,11 @@
 			</div>
 		</div>
 
-		<div class="row no-spacing-bottom">
+		<div class="row">
 			<div class="col-12">12</div>
 		</div>
 
-		<div class="row">
+		<div class="row no-spacing-top">
 			<div class="col-12">12</div>
 		</div>
 
@@ -502,50 +507,90 @@
 		<div class="row">
 			<div class="col-12 no-background no-padding-row">
 				<h2>
-					GRID não fluída
+					Lista de Itens
 				</h2>
 				
 				<p class="syntaxhighlighter">
-					Conforme o tamanho da tela alacançar o tamanho de cada breakpoint a row se ajusta <br>
-					Para utilizar GRID não fluídas, basta adicionar no container desejada a class <code class="xml string">no-fluid</code>.
+					Você pode criar lista de 4, 3 e 2 colunas, para isso basta utilizar as classes 
+					<code class="xml string">.list-col-3</code>, <code class="xml string">.list-col-4</code> e <code class="xml string">.list-col-6</code> respectivamente.
 				</p>
 
 				<pre class="brush: xml; notranslate">
-					<div class="container no-fluid">
+					<div class="container">
 						<div class="row">
-							<div class="col-6">6</div>
-							<div class="col-6">6</div>
+							<ul class="list list-col-4">
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+							</ul>
 						</div>
 
 						<div class="row">
-							<div class="col-2">2</div>
-							<div class="col-2">2</div>
-							<div class="col-2">2</div>
-							<div class="col-2">2</div>
-							<div class="col-2">2</div>
-							<div class="col-2">2</div>
+							<ul class="list list-col-4">
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+								<li>4</li>
+							</ul>
 						</div>
 					</div>
 				</pre>
 			</div>
 		</div>
 	</div>
-	<div class="container no-fluid">
+
+	<div class="container">
 		<div class="row">
-			<div class="col-6">6</div>
-			<div class="col-6">6</div>
+			<ul class="list list-col-4">
+				<li>4</li>
+				<li>4</li>
+				<li>4</li>
+				<li>4</li>
+				<li>4</li>
+				<li>4</li>
+				<li>4</li>
+				<li>4</li>
+				<li>4</li>
+				<li>4</li>
+				<li>4</li>
+				<li>4</li>
+			</ul>
 		</div>
 
-		<div class="row">
-			<div class="col-2">2</div>
-			<div class="col-2">2</div>
-			<div class="col-2">2</div>
-			<div class="col-2">2</div>
-			<div class="col-2">2</div>
-			<div class="col-2">2</div>
+		<div class="row box">
+			<ul class="list list-col-3">
+				<li>3</li>
+				<li>3</li>
+				<li>3</li>
+				<li>3</li>
+				<li>3</li>
+				<li>3</li>
+				<li>3</li>
+				<li>3</li>
+				<li>3</li>
+				<li>3</li>
+				<li>3</li>
+				<li>3</li>
+			</ul>
 		</div>
 	</div>
-
 	<footer>
 		GAC GRID
 	</footer>
